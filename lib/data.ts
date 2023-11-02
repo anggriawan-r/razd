@@ -60,7 +60,7 @@ export const projectsData = [
   {
     title: "blogin",
     description:
-      'A blog web app. User can post blogs here, and give comments to other blog created by other user. Currently work in progress. Stay tuned. You can visit the repository <a href="https://github.com/anggriawan-r/blogin" className="font-semibold underline" target="_blank">here</a>.',
+      'A blog web app. Users can post blogs here and comment on other blogs created by other users. This is currently work in progress. You can visit the repository <a href="https://github.com/anggriawan-r/blogin" className="font-semibold underline" target="_blank">here</a>.',
     tags: [
       "JavaScript",
       "css",
@@ -71,27 +71,6 @@ export const projectsData = [
       "Prisma",
     ],
     imageUrl: corpcommentImg,
-  },
-  {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
-  },
-  {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
   },
 ] as const;
 
