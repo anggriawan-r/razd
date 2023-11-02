@@ -1,5 +1,7 @@
 "use client";
 
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,10 +10,14 @@ import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 
 export default function Intro() {
+  const { ref } = useSectionInView(0.5, "Home");
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
     <section
       id="home"
-      className="flex max-w-[50rem] scroll-mt-[100rem] flex-col justify-center gap-8 p-4"
+      ref={ref}
+      className="container flex max-w-screen-md scroll-mt-[100rem] flex-col justify-center gap-8 p-4"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -28,6 +34,8 @@ export default function Intro() {
               src="/profile.jpg"
               alt="My Portrait"
               fill
+              quality={98}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-full border-[0.35rem] border-white object-cover shadow-xl"
             />
           </motion.div>
@@ -52,9 +60,9 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Welcome to my website! I'm Anggriawan, a passionate Full-Stack Web
-        Developer based in Indonesia. Looking for opportunities in the industry.
-        Feel free to contact me!
+        Welcome to my website! I'm Anggriawan, a passionate Front-End Developer
+        based in Indonesia. Also a Back-End Developer focusing on Next.js.
+        Looking for opportunities in the industry. Feel free to contact me!
       </motion.h1>
 
       <motion.div
@@ -68,6 +76,10 @@ export default function Intro() {
         <Link
           href="#contact"
           className="group flex w-full items-center justify-center gap-2 rounded-full bg-gray-900 py-3 text-white transition hover:scale-105 sm:w-[10rem] sm:hover:scale-110"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
@@ -75,7 +87,7 @@ export default function Intro() {
 
         <a
           href="/CV.pdf"
-          className="flex w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white py-3 transition hover:scale-105 sm:w-[10rem] sm:hover:scale-110"
+          className="borderBlack flex w-full items-center justify-center gap-2 rounded-full bg-white py-3 transition hover:scale-105 dark:bg-white/10 sm:w-[10rem] sm:hover:scale-110"
           download
         >
           Download CV <HiDownload />
@@ -86,7 +98,7 @@ export default function Intro() {
             href="https://www.linkedin.com/in/anggriawanr/"
             target="_blank"
             rel="noreferrer noopener"
-            className="flex h-[3rem] w-[3rem] items-center justify-center rounded-full border border-black/10 bg-white text-2xl transition hover:scale-[1.15] sm:px-1"
+            className="borderBlack flex h-[3rem] w-[3rem] items-center justify-center rounded-full bg-white text-2xl transition hover:scale-[1.15] dark:bg-white/10 dark:text-white/60 sm:px-1"
           >
             <BsLinkedin />
           </a>
@@ -95,7 +107,7 @@ export default function Intro() {
             href="https://github.com/anggriawan-r"
             target="_blank"
             rel="noreferrer noopener"
-            className="flex h-[3rem] w-[3rem] items-center justify-center rounded-full border border-black/10 bg-white text-2xl transition hover:scale-[1.15] sm:px-1"
+            className="borderBlack flex h-[3rem] w-[3rem] items-center justify-center rounded-full bg-white text-2xl transition hover:scale-[1.15] dark:bg-white/10 dark:text-white/60 sm:px-1"
           >
             <BsGithub />
           </a>

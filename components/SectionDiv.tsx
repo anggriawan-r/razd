@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function SectionDiv() {
   return (
     <motion.div
-      className="my-16 hidden h-16 w-1 rounded-full bg-gray-200 sm:block"
+      className="my-[6rem] hidden h-16 w-1 rounded-full bg-gray-200 dark:bg-opacity-20 sm:block"
       initial={{
         opacity: 0,
         y: 100,

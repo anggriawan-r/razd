@@ -20,6 +20,10 @@ export const links = [
     hash: "#projects",
   },
   {
+    name: "Skills",
+    hash: "#skills",
+  },
+  {
     name: "Contact",
     hash: "#contact",
   },
@@ -53,6 +57,21 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "blogin",
+    description:
+      'A blog web app. User can post blogs here, and give comments to other blog created by other user. Currently work in progress. Stay tuned. You can visit the repository <a href="https://github.com/anggriawan-r/blogin" className="font-semibold underline" target="_blank">here</a>.',
+    tags: [
+      "JavaScript",
+      "css",
+      "React",
+      "Next.js",
+      "MongoDB",
+      "Firebase",
+      "Prisma",
+    ],
+    imageUrl: corpcommentImg,
+  },
   {
     title: "CorpComment",
     description:
@@ -88,12 +107,9 @@ export const skillsData = [
   "Tailwind",
   "Prisma",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
   "Express",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
+  "Figma",
 ] as const;

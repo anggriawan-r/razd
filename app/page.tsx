@@ -1,8 +1,9 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Intro from "@/components/Intro";
-import Project from "@/components/Project";
+import Projects from "@/components/Projects";
 import SectionDiv from "@/components/SectionDiv";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
       <SectionDiv />
       <About />
       <SectionDiv />
-      <Project />
+      <Projects />
       <SectionDiv />
+      <Skills />
       <Contact />
     </main>
   );
