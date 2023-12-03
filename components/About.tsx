@@ -19,18 +19,16 @@ export default function About() {
     >
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-3 leading-8 text-gray-700 dark:text-white/80">
-        After graduating with a Science Degree, I decided to pursue my passion
-        for designing and programming. The only way that can do both is through
-        web developer. Previously, I had designed the UI for my start-up website
-        for a year. That's where I found my passion. I love when designing
-        something that is structured but not outdated, and then applying it to
-        something that can be used. That something is website!
+        After graduating, I decided to pursue my passion for designing and
+        programming. The only way that can do both is through web developer. I
+        have experience in designing UI for my start-up website. I love when
+        designing something that is structured but not outdated.
       </p>
       <p className="mb-3 leading-8 text-gray-700 dark:text-white/80">
-        Therefore, I'm an enthusiastic full-stack web developer with an
-        addiction for discovering new front-end perspectives. Oh, and my core
-        stack is React, Next.js, and MongoDB. I would love to learn another tech
-        stack if needed.
+        I have interest in a career as Front-end Developer with React. I am a
+        fast learner and self-taught. I have learned a lot in the past year by
+        myself on the internet. I would love to learn another tech stack, even
+        learning Back-end and that is what I'm still doing right now.
       </p>
     </motion.section>
   );

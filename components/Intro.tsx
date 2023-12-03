@@ -56,13 +56,14 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="flex justify-center text-center text-xl"
+        className="text-center text-xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Welcome to my website! I'm Anggriawan, a passionate Front-End Developer
-        based in Indonesia. Also a Back-End Developer focusing on Next.js.
-        Looking for opportunities in the industry. Feel free to contact me!
+        Welcome to my website!{" "}
+        <span className="font-semibold">I'm Anggriawan</span>, a passionate
+        <span className="font-semibold"> Front-End Developer</span> based in
+        Indonesia. Feel free to contact me!
       </motion.h1>
 
       <motion.div

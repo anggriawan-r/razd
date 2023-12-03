@@ -5,6 +5,7 @@ import parse from "html-react-parser";
 import Image from "next/image";
 import { projectsData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,6 +13,7 @@ export default function Project({
   title,
   description,
   tags,
+  url,
   imageUrl,
 }: ProjectProps) {
   const ref = useRef(null);
@@ -30,7 +32,9 @@ export default function Project({
     >
       <section className="flex w-full flex-col-reverse gap-8 overflow-hidden border border-black/5 bg-gray-100 p-4 transition hover:bg-gray-200 dark:border-white/5 dark:bg-white/10 dark:hover:bg-white/20 sm:h-max sm:flex-row sm:gap-16 sm:px-8 sm:py-8">
         <div className="flex flex-col sm:flex-[3]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
+          <h3 className="text-2xl font-semibold">
+            <Link href={url}>{title}</Link>
+          </h3>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {parse(description)}
           </p>
