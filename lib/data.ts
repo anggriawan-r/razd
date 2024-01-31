@@ -27,7 +27,7 @@ export const projectsData = [
   {
     title: "blogin",
     description:
-      'A blog web app. Users can post blogs here and share them across the world. This is currently work in progress. You can visit the  <a href="https://github.com/anggriawan-r/blogin" className="font-semibold underline" target="_blank">repository</a> or the <a href="https://blogin-razd.vercel.app" className="font-semibold underline" target="_blank">production page</a>.',
+      'A blog web app. Users can post blogs here and share them across the world. This blog is What You See Is What You Get kind of blogs. You can visit the  <a href="https://github.com/anggriawan-r/blogin" className="font-semibold underline" target="_blank">repository</a> or the <a href="https://blogin-razd.vercel.app" className="font-semibold underline" target="_blank">production page</a>.',
     tags: [
       "TypeScript",
       "Tailwind",
